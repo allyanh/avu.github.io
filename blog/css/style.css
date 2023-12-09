@@ -47,10 +47,11 @@
 
 
 /* ------ START WRITING YOUR CODE BELOW ------ */
-
 /* ------ Spacing ------ */
 
 /* Margin */
+
+
 
 /* Letter-spacing, Word-spacing, Line-height */
 p {
@@ -70,7 +71,7 @@ p {
 /* Style for each figure within .subsection */
 .subsection figure {
     display: inline-block;
-    text-align: center; /* Center the content within each figure */
+    text-align: center; /* Optional: Center the content within each figure */
 }
 .subsection img {
     max-width: 100%; /* Ensure images don't exceed the width of their container */
@@ -325,4 +326,12 @@ footer p{
     padding-inline: 0px;
     font-size: 0.8rem;
 }
+
+
+
+
+
+
+
+
 
