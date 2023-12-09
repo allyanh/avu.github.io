@@ -48,4 +48,281 @@
 
 /* ------ START WRITING YOUR CODE BELOW ------ */
 
+/* ------ Spacing ------ */
+
+/* Margin */
+
+/* Letter-spacing, Word-spacing, Line-height */
+p {
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* Width, Max-width, Min-width */
+
+.subsection {
+       display: flex;
+    justify-content: space-between; /* Adjust as needed */
+   
+}
+
+/* Style for each figure within .subsection */
+.subsection figure {
+    display: inline-block;
+    text-align: center; /* Center the content within each figure */
+}
+.subsection img {
+    max-width: 100%; /* Ensure images don't exceed the width of their container */
+}
+
+
+/* Font-family, Font-size, Font-style, Font-weight */
+body {
+        font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Apply a border to the top and bottom of the <nav> */
+nav {
+    border-top: 1px solid gray; /* Adjust color and thickness as needed */
+    border-bottom: 1px solid gray; /* Adjust color and thickness as needed */
+    margin: 20px 0; /* Adjust top and bottom margin as needed */
+    max-width:100%; /* Set a maximum width for the navigation */
+    padding-top:4px;
+    padding-bottom: 4px;
+}
+
+/* Center the navigation links within the container */
+nav ul {
+    list-style: none;
+    margin: 0;
+    display:flex;
+    justify-content:space-evenly;
+    width: 70%;
+}
+
+/* Style the <li> elements to create equal spacing and adjust margins */
+nav li {
+    margin: 10px 0; /* Adjust top and bottom margin as needed */
+    
+}
+nav li:nth-child(2) a {
+    text-decoration: none;
+   
+    transform: rotate(-20deg);
+transform-origin: left top;
+    color:black; /* Adjust text color as needed */
+    font-weight: bold;
+    text-transform: uppercase; /* Convert text to uppercase */
+    position: relative; /* Set position to relative for absolute positioning of the cut line */
+}
+
+/* Create a cut line over the second label */
+nav li:nth-child(2) a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+    border-top: 2px solid black; /* Adjust cut line color and thickness as needed */
+    transform: translateX(-50%) translateY(70%) rotate(0.1deg); /* Adjust rotation angle as needed */
+}
+
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color:darkslategrey; /* Adjust text color as needed */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Style for h1 tag */
+h1 {
+    font-size: 48px; /* Adjust the font size as needed */
+    position: relative; /* To use absolute positioning for the span */
+    line-height: 1.5; /* Adjust line height for better readability */
+    text-align:center;
+    transform: rotate(-5deg);
+    transform-origin: left top;
+    
+}
+
+/* Style for the second word within h1 */
+h1 span.highlight {
+    height: 1em;
+    color: #f5f3f2; /* Highlight color, adjust as needed */
+    background-color:maroon;
+    font-family:'roboto-regular', sans-serif; 
+    border-top-left-radius: 10px; /* Adjust the radius for the top left corner */
+    border-bottom-right-radius: 10px; /* Adjust the radius for the bottom right corner */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 2px 0 maroon, 0 4px 0 rgba(0, 0, 0, 0.3); 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+}
+body{
+    font-family:'roboto-regular', sans-serif;
+    color: #555;
+  
+     
+}
+
+/* Move the heading towards the upside */
+h1::before {
+    content: ""; /* Empty content for the pseudo-element */
+    display: block;
+    height: 0.75em; /* Adjust the height to control the space above the heading */
+
+}
+
+/* ------ Box, Layout, and Border ------ */
+
+/* Border */
+.box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Box-shadow */
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Transform */
+.rotated-text {
+    transform: rotate(45deg);
+}
+
+/* ------ Other ------ */
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* @font-face or @import */
+@font-face{
+    font-family:sans-serif;
+    src:url(../fonts/sans-serif/roboto-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style: normal;
+}
+@font-face{
+    font-family:serif;
+    src:url(../fonts/serif/ultra-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style: normal;
+}
+
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 28px;
+    cursor: pointer;
+    background-color: rgb(48, 42, 165);
+    color: white;
+    position: relative;
+    font-family:Georgia, 'Times New Roman', Times, serif 
+    }
+    
+          
+          
+    .article-image {
+        float: left;
+        margin-right: 20px; /* Adjust the margin as needed to provide spacing between the image and text */
+    }
+    
+    /* Clear the float to prevent layout issues */
+    .article-image:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+                        
+
+    .main-section {
+        display: flex;
+        width: 100%;
+       
+    }
+    main{
+        padding-left:4px;
+        padding-right: 4px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    
+    article {
+        flex: 1; /* Adjust the width as needed */
+        box-sizing: border-box;
+        padding: 20px;
+        width: 80%;
+    }
+    
+    aside {
+        flex-basis: 10%; /* Adjust the width as needed */
+        box-sizing: border-box;
+        padding: 20px;
+        padding-top: 0px;
+        width: 20%;
+        border-left: 1px solid #555;
+
+    }
+    aside p{
+        font-size: 0.5rem;
+        color: #555;
+        border-bottom: 1px solid #555;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    aside a {
+        text-decoration: none;
+        font-size: 3px;
+        display: block; /* Make the <a> tag a block-level element */
+        margin-top: 10px; /* Add margin-top to create space between the link and the last paragraph */
+        margin-bottom: 30px;
+        text-align: left; /* Align the link to the center if needed */
+    }
+
+    aside img{height: 200px;}
+    article p{
+       font-size: 0.75rem;
+    }
+    
+    time {
+        font-style: italic;
+        color: #888; /* Grey color, adjust as needed */
+        font-size: 0.8rem; /* Adjust the font size as needed */
+    }
+
+    .subsection figcaption{background-color:lightgrey;
+    text-align: left;
+  
+font-size: 0.8rem;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 8px;}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+   font-size: 0.9rem;
+
+}
+footer a{
+   text-decoration: none;
+   color: #888;
+}
+footer p{
+    padding-inline: 0px;
+    font-size: 0.8rem;
+}
 
